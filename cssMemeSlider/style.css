@@ -1,4 +1,4 @@
-/* Reset and base styles  */
+/* Reset and base styles */
 * {
 	padding: 0px;
 	margin: 0px;
@@ -11,143 +11,84 @@
 	box-sizing: border-box;
 }
 
-/* Links */
-
-a, a:link, a:visited  {
-    text-decoration: none;
-}
-
-a:hover  {
-    text-decoration: none;
-}
-
-/* Common */
-
-aside, nav, footer, header, section, main {
-	display: block;
-}
-
 h1, h2, h3, h4, h5, h6, p {
-    font-size: inherit;
+  font-size: inherit;
 	font-weight: inherit;
-}
-
-ul, ul li {
-	list-style: none;
-}
-
-img {
-	vertical-align: top;
-}
-
-img, svg {
-	max-width: 100%;
-	height: auto;
 }
 
 address {
   font-style: normal;
 }
 
-/* Form */
-
-input, textarea, button, select {
-	font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background-color: transparent;
-}
-
-input::-ms-clear {
-	display: none;
-}
-
-button, input[type="submit"] {
-    display: inline-block;
-    box-shadow: none;
-    background-color: transparent;
-    background: none;
-    cursor: pointer;
-}
-
-input:focus, input:active,
-button:focus, button:active {
-    outline: none;
-}
-
-button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
-}
-
 label {
 	cursor: pointer;
 }
 
-legend {
-	display: block;
-}
-
 body {
-  width: 1920px;
-  height: 1080px;
-  background-color: gray;
-}
-
-input[name = 'img'] {
-  scale: 3;
-  color: black;
+  background: grey;
 
 }
-.wrapper {
-  width: 1000px;
-  height: 600px;
-  overflow: hidden;
-  border: 5px solid white;
+.header {
+  height: 0vh;
 }
-.main {
-  position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.footer {
-  position: absolute;
+.mainWrapper {
   display: flex;
-  bottom: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  /* background-color: black; */
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 100px;
+  background-color: rgba(0, 0, 0, 0.139);
+  max-width: 100vh;
+  margin: auto;
 }
-.defaultRadio {
-  display: none;
-}
-.radioLabel {
- position: absolute;
- display: flex;
- align-items: center;
- gap:33px
-}
-.nav {
-  position: static;
-  width: 60px;
-  height: 60px;
-  background-color: rgb(233, 243, 243);
-  opacity: 0;
-  border-radius: 30px;
-  transition: all 0.4s ease;
-}
-.nav:hover {
-  opacity: .1;
-  transform: scale(1.2);
-}
-.radioInput {
-  position: absolute;
+.slider {
   display: flex;
-  gap:80px;
- 
+  flex-direction: column;
+}
+.imagesWrapper {
+  overflow: hidden;
+  display: flex;
+  height: 70vh;
+
+}
+.images {
+  display: flex;
+  align-items: center;
+  margin-left: 30%;
+  gap: 31%
+
+}
+.meme {
+  height: 80%;
+  width: 80%;
+}
+
+.sliderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
+}
+.dots input:hover {
+  background: rgb(255, 255, 255);
+}
+
+input[type="radio"]:checked {
+  cursor: pointer;
+  background-color: rgb(164, 194, 253);
+}
+input[type="radio"] {
+  appearance: none;
+  cursor: pointer;
+  width: 2rem;
+  height:  2rem;
+  border: 0.2rem solid rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: 0.2s all linear;
+  background-clip: content-box;
+  margin: 0rem;
+  padding: 0rem;
 }
