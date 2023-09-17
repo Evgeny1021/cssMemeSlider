@@ -133,7 +133,6 @@ body {
 .dots:has(#img4:checked)~.textWrapper .textContainer {
   transform: translateX(calc(-310%));
 }
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -143,5 +142,79 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 35rem) {
+  .textWrapper {
+    max-width: 100%;
+    order: 3;
+  }
+  .mainWrapper {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.41);
+    max-width: 150vh;
+    height: auto;
+    margin: auto;
+  }
+  .textContainer {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  .dots {
+    margin: 0 auto;
+    max-width: 100%;
+    order: 2;
+  }
+  .slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+  }
+  .imagesWrapper {
+    overflow: hidden;
+    width: 8rem;
+    height: 12rem;
+    order: 1;
+  }
+  .images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    height: 60vh;
+    width: 100vh;
+  }
+  .meme {
+    width: 100%;
+    height: 100%;
+  }
+  .scaleMeme {
+    scale: 0.8;
+  }
+  .dots:has(#img1:checked)~.textWrapper .textContainer {
+    transform: translateX(0%);
+  }
+  .dots:has(#img2:checked)~.textWrapper .textContainer {
+    transform: translateX(calc(-100%));
+  }
+  .dots:has(#img3:checked)~.textWrapper .textContainer {
+    transform: translateX(calc(-200%));
+  }
+  .dots:has(#img4:checked)~.textWrapper .textContainer {
+    transform: translateX(calc(-300%));
+  }
+  .dots:has(#img1:checked)~.imagesWrapper .images {
+    transform: translateX(0);
+  }
+  .dots:has(#img2:checked)~.imagesWrapper .images {
+    transform: translateX(-50%);
+  }
+  .dots:has(#img3:checked)~.imagesWrapper .images {
+    transform: translateX(-110%);
+  }
+  .dots:has(#img4:checked)~.imagesWrapper .images {
+    transform: translateX(-181%);
   }
 }
