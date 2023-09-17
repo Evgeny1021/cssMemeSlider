@@ -145,7 +145,7 @@ body {
   }
 }
 
-@media (max-width: 35rem) {
+@media (max-width: 32rem) {
   .textWrapper {
     max-width: 100%;
     order: 3;
